@@ -1,0 +1,46 @@
+{
+    "name": "walkerchiu/php-account-int",
+    "type": "library",
+    "authors": [
+        {
+            "name":  "Walker Chiu",
+            "email": "chenjen.chiou@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.3",
+        "walkerchiu/php-core-int": "^1.0"
+    },
+    "suggest": {
+        "walkerchiu/php-currency-int": "^1.0",
+        "walkerchiu/php-morph-address-int": "^1.0",
+        "walkerchiu/php-morph-comment-int": "^1.0",
+        "walkerchiu/php-morph-link-int": "^1.0",
+        "walkerchiu/php-morph-registration-int": "^1.0",
+        "walkerchiu/php-payment-int": "^1.0",
+        "walkerchiu/php-role-int": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WalkerChiu\\Account\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WalkerChiu\\Account\\AccountServiceProvider"
+            ],
+            "aliases": {
+                "Profile": "WalkerChiu\\Account\\Models\\Entities\\Profile"
+            }
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
