@@ -56,9 +56,7 @@ class CreateWkAccountTable extends Migration
     public function down() {
         if (config('wk-account.users.edit')) {
             Schema::table(config('wk-core.table.user'), function (Blueprint $table) {
-                $table->dropColumn('login_at');
-                $table->dropColumn('is_enabled');
-                $table->dropColumn('deleted_at');
+                $table->dropColumn(['login_at','is_enabled','deleted_at']);
             });
         }
         Schema::dropIfExists(config('wk-core.table.account.profiles'));
