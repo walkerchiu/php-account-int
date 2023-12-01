@@ -108,17 +108,17 @@ class Profile extends Model
 
     /**
      * @param String  $type
-     * @param String  $category
+     * @param String  $nav
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany
      */
-    public function links($type = null, $category = null)
+    public function links($type = null, $nav = null)
     {
         return $this->morphMany(config('wk-core.class.morph-link.link'), 'morph')
                     ->when($type, function ($query, $type) {
                                 return $query->where('type', $type);
                             })
-                    ->when($category, function ($query, $category) {
-                                return $query->where('category', $category);
+                    ->when($nav, function ($query, $nav) {
+                                return $query->where('nav', $nav);
                             });
     }
 
