@@ -15,7 +15,8 @@
         "walkerchiu/php-core-int": "^1.0"
     },
     "require-dev": {
-        "doctrine/dbal": "^2.5"
+        "doctrine/dbal": "^2.5",
+        "orchestra/testbench": "^5.0"
     },
     "suggest": {
         "walkerchiu/php-currency-int": "^1.0",
